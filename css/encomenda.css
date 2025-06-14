@@ -1,0 +1,187 @@
+/* Order Header */
+.order-header {
+  padding: 4rem 0 2rem;
+  text-align: center;
+  background-color: var(--secondary);
+}
+
+.order-header h1 {
+  margin-bottom: 1rem;
+}
+
+.order-header p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Order Form */
+.order-form {
+  padding: 3rem 0;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--background);
+  border-radius: var(--radius);
+  box-shadow: 0 5px 15px var(--shadow);
+  padding: 2rem;
+}
+
+.form-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.form-section:last-child {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.form-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: var(--background);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(232, 67, 147, 0.2);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-help {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+/* Radio and Checkbox Groups */
+.radio-group,
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.radio-option,
+.checkbox-option {
+  display: flex;
+  align-items: center;
+}
+
+.radio-option input[type="radio"],
+.checkbox-option input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.radio-option label,
+.checkbox-option label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* Form Submit */
+.form-submit {
+  text-align: center;
+}
+
+.form-note {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-top: 1rem;
+}
+
+/* Flatpickr Calendar Customization */
+.flatpickr-calendar {
+  border-radius: var(--radius);
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Responsive */
+@media (min-width: 576px) {
+  .form-container {
+    padding: 2.5rem;
+  }
+
+  .radio-group,
+  .checkbox-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-container {
+    padding: 3rem;
+  }
+}

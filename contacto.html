@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Docinhos C'Art Cake Design</title>
+    <meta name="description" content="Entre em contacto com a Docinhos C'Art Cake Design para encomendar bolos personalizados">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="./images/logo.jpg" alt="Docinhos C'Art Cake Design">
+                    <span class="logo-text">Docinhos C'Art</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contacto.html" class="active">Contacto</a></li>
+                        <li><a href="encomenda.html" class="btn btn-primary">Encomendar</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile">
+                <ul class="nav-links-mobile">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="encomenda.html" class="btn btn-primary btn-full">Encomendar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-header">
+            <div class="container">
+                <h1>Entre em Contacto</h1>
+                <p>Estamos aqui para responder a todas as suas perguntas e ajudar a tornar a sua ocasião especial ainda mais doce.</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form">
+                        <h2>Envie-nos uma Mensagem</h2>
+                        <form id="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" id="nome" name="nome" placeholder="O seu nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="nome.email@exemplo.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="O seu número de telefone">
+                            </div>
+                            <div class="form-group">
+                                <label for="assunto">Assunto</label>
+                                <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua mensagem aqui..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info">
+                        <h2>Informações de Contacto</h2>
+                        <div class="info-card">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h3>Endereço</h3>
+                                    <p>Rua Solverde Nº 194 Antas, Vila Nova de Famalicão 4760 - 404</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h3>Telefone</h3>
+                                    <p><a href="tel:+351912345678">+351 936 401 951</a></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:info@docinhoscart.pt">docinho.c.art@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h3>Horário de Funcionamento</h3>
+                                    <p>
+                                        Segunda a Sexta: 9h às 18h<br>
+                                        Sábado: 9h às 13h<br>
+                                        Domingo: Fechado
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fab fa-instagram"></i>
+                                <div>
+                                    <h3>Redes Sociais</h3>
+                                    <p>
+                                        <a href="https://instagram.com/docinhoscart" target="_blank" rel="noopener noreferrer">@docinhoscart</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23868.64373925!2d-8.54!3d41.41!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24f1c1d6ecb553%3A0x7e03e1d24a042ae7!2sVila%20Nova%20de%20Famalic%C3%A3o!5e0!3m2!1spt-PT!2spt!4v1623345678901!5m2!1spt-PT!2spt" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Docinhos C'Art"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="./images/logo.jpg" alt="Docinhos C'Art Cake Design">
+                        <div>
+                            <h3>Docinhos C'Art</h3>
+                            <p>Cake Design</p>
+                        </div>
+                    </div>
+                    <p>Bolos artesanais personalizados para todas as ocasiões especiais.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/docinhoscart" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="encomenda.html">Fazer Encomenda</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rua Solverde Nº 194 Antas, Vila Nova de Famalicão 4760 - 404</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+351912345678">+351 936 401 951</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@docinhoscart.pt">docinho.c.art@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Docinhos C'Art Cake Design. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/contacto.js"></script>
+</body>
+</html>

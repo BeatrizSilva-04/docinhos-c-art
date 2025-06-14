@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Docinhos C'Art Cake Design</title>
+    <meta name="description" content="Galeria de bolos artesanais personalizados da Docinhos C'Art Cake Design">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="./images/logo.jpg" alt="Docinhos C'Art Cake Design">
+                    <span class="logo-text">Docinhos C'Art</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="galeria.html" class="active">Galeria</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="encomenda.html" class="btn btn-primary">Encomendar</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile">
+                <ul class="nav-links-mobile">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="encomenda.html" class="btn btn-primary btn-full">Encomendar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-header">
+            <div class="container">
+                <h1>Galeria de Bolos</h1>
+                <p>Descubra nossa coleção de bolos artesanais personalizados para todas as ocasiões. Cada criação é única e feita com paixão e dedicação.</p>
+            </div>
+        </section>
+
+        <section class="gallery-filter">
+            <div class="container">
+                <div class="gallery-grid" id="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                    <!-- Os itens da galeria serão inseridos aqui via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Gostou do que viu?</h2>
+                <p>Entre em contacto connosco para encomendar o seu bolo personalizado para qualquer ocasião especial.</p>
+                <a href="contacto.html" class="btn btn-primary">Fazer Encomenda</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="./images/logo.jpg" alt="Docinhos C'Art Cake Design">
+                        <div>
+                            <h3>Docinhos C'Art</h3>
+                            <p>Cake Design</p>
+                        </div>
+                    </div>
+                    <p>Bolos artesanais personalizados para todas as ocasiões especiais.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/docinhoscart" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="encomenda.html">Fazer Encomenda</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rua Solverde Nº 194 Antas, Vila Nova de Famalicão 4760 404</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+351912345678">+351 912 345 678</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@docinhoscart.pt">info@docinhoscart.pt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Docinhos C'Art Cake Design. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para visualização de detalhes do bolo -->
+    <div class="modal" id="cake-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="/placeholder.svg" alt="" id="modal-image">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-title"></h2>
+                    <div class="modal-category">
+                        <span>Categoria: </span>
+                        <span id="modal-category"></span>
+                    </div>
+                    <div class="modal-description" id="modal-description"></div>
+                    <div class="modal-actions">
+                        <a href="encomenda.html" class="btn btn-primary">Encomendar Semelhante</a>
+                        <button class="btn btn-outline">
+                            <i class="far fa-heart"></i>
+                            Adicionar aos Favoritos
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-share-alt"></i>
+                            Partilhar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/galeria.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encomendar - Docinhos C'Art Cake Design</title>
+    <meta name="description" content="Encomende o seu bolo personalizado da Docinhos C'Art Cake Design">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/encomenda.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="./logo.jpg" alt="Docinhos C'Art Cake Design">
+                    <span class="logo-text">Docinhos C'Art</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="encomenda.html" class="btn btn-primary active">Encomendar</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile">
+                <ul class="nav-links-mobile">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="encomenda.html" class="btn btn-primary btn-full">Encomendar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="order-header">
+            <div class="container">
+                <h1>Encomendar Bolo</h1>
+                <p>Preencha o formulário abaixo para encomendar o seu bolo personalizado. Entraremos em contacto para confirmar os detalhes e o orçamento.</p>
+            </div>
+        </section>
+
+        <section class="order-form">
+            <div class="container">
+                <div class="form-container">
+                    <form id="order-form">
+                        <!-- Informações Pessoais -->
+                        <div class="form-section">
+                            <h2>Informações Pessoais</h2>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nome">Nome Completo</label>
+                                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="telefone">Telefone</label>
+                                    <input type="tel" id="telefone" name="telefone" placeholder="Seu número de telefone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cidade">Cidade</label>
+                                    <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Detalhes do Bolo -->
+                        <div class="form-section">
+                            <h2>Detalhes do Bolo</h2>
+                            
+                            <div class="form-group">
+                                <label>Tipo de Bolo</label>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input type="radio" id="aniversario" name="tipo" value="aniversario" checked>
+                                        <label for="aniversario">Aniversário</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="casamento" name="tipo" value="casamento">
+                                        <label for="casamento">Casamento</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="batizado" name="tipo" value="batizado">
+                                        <label for="batizado">Batizado</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="comunhao" name="tipo" value="comunhao">
+                                        <label for="comunhao">Comunhão</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="empresarial" name="tipo" value="empresarial">
+                                        <label for="empresarial">Empresarial</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="outro-tipo" name="tipo" value="outro">
+                                        <label for="outro-tipo">Outro</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sabor">Sabor do Bolo</label>
+                                    <select id="sabor" name="sabor" required>
+                                        <option value="" disabled selected>Selecione um sabor</option>
+                                        <option value="chocolate">Chocolate</option>
+                                        <option value="baunilha">Baunilha</option>
+                                        <option value="red-velvet">Red Velvet</option>
+                                        <option value="limao">Limão</option>
+                                        <option value="morango">Morango</option>
+                                        <option value="coco">Coco</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="recheio">Recheio</label>
+                                    <select id="recheio" name="recheio" required>
+                                        <option value="" disabled selected>Selecione um recheio</option>
+                                        <option value="chocolate">Chocolate</option>
+                                        <option value="doce-leite">Doce de Leite</option>
+                                        <option value="frutas-vermelhas">Frutas Vermelhas</option>
+                                        <option value="brigadeiro">Brigadeiro</option>
+                                        <option value="creme-pasteleiro">Creme Pasteleiro</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="tamanho">Tamanho</label>
+                                    <select id="tamanho" name="tamanho" required>
+                                        <option value="" disabled selected>Selecione um tamanho</option>
+                                        <option value="pequeno">Pequeno (até 10 pessoas)</option>
+                                        <option value="medio">Médio (10-20 pessoas)</option>
+                                        <option value="grande">Grande (20-30 pessoas)</option>
+                                        <option value="extra-grande">Extra Grande (30+ pessoas)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="formato">Formato</label>
+                                    <select id="formato" name="formato" required>
+                                        <option value="" disabled selected>Selecione um formato</option>
+                                        <option value="redondo">Redondo</option>
+                                        <option value="quadrado">Quadrado</option>
+                                        <option value="retangular">Retangular</option>
+                                        <option value="personalizado">Personalizado</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tema">Tema ou Estilo</label>
+                                <input type="text" id="tema" name="tema" placeholder="Ex: Princesas, Super-heróis, Rústico, Elegante...">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cores">Cores Preferidas</label>
+                                <input type="text" id="cores" name="cores" placeholder="Ex: Rosa e dourado, Azul e branco...">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="detalhes">Detalhes Adicionais</label>
+                                <textarea id="detalhes" name="detalhes" placeholder="Descreva detalhes específicos que gostaria no seu bolo..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Extras</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" id="topo" name="extras" value="topo">
+                                        <label for="topo">Topo personalizado</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" id="numeros" name="extras" value="numeros">
+                                        <label for="numeros">Números/Letras</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" id="flores" name="extras" value="flores">
+                                        <label for="flores">Flores de açúcar</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" id="figuras" name="extras" value="figuras">
+                                        <label for="figuras">Figuras modeladas</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Data e Entrega -->
+                        <div class="form-section">
+                            <h2>Data e Entrega</h2>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="data-evento">Data do Evento</label>
+                                    <input type="text" id="data-evento" name="data-evento" placeholder="Selecione uma data" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Método de Entrega</label>
+                                    <div class="radio-group">
+                                        <div class="radio-option">
+                                            <input type="radio" id="levantar" name="entrega" value="levantar" checked>
+                                            <label for="levantar">Levantar na loja</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="entrega" name="entrega" value="entrega">
+                                            <label for="entrega">Entrega (sujeito a taxa)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Referência -->
+                        <div class="form-section">
+                            <h2>Referência (Opcional)</h2>
+                            <div class="form-group">
+                                <label for="referencia">Link ou Descrição de Referência</label>
+                                <input type="text" id="referencia" name="referencia" placeholder="Link para uma imagem de referência ou descrição detalhada">
+                                <p class="form-help">Pode enviar-nos uma imagem de referência por email ou através das redes sociais.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary btn-full">Enviar Pedido de Orçamento</button>
+                            <p class="form-note">Após o envio do formulário, entraremos em contacto para confirmar os detalhes e fornecer um orçamento.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="./images/logo.jpg" alt="Docinhos C'Art Cake Design">
+                        <div>
+                            <h3>Docinhos C'Art</h3>
+                            <p>Cake Design</p>
+                        </div>
+                    </div>
+                    <p>Bolos artesanais personalizados para todas as ocasiões especiais.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/docinhoscart" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="encomenda.html">Fazer Encomenda</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rua Solverde Nº 194 Antas, Vila Nova de Famalicão 4760 404</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+351912345678">+351 912 345 678</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@docinhoscart.pt">info@docinhoscart.pt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Docinhos C'Art Cake Design. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/encomenda.js"></script>
+</body>
+</html>
