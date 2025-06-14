@@ -19,7 +19,7 @@
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <img src="./logo.jpg" alt="Docinhos C'Art Cake Design">
+                    <img src="./images/logo.jpg" alt="Docinhos C'Art Cake Design">
                     <span class="logo-text">Docinhos C'Art</span>
                 </a>
 
@@ -64,28 +64,28 @@
         <section class="order-form">
             <div class="container">
                 <div class="form-container">
-                    <form id="order-form">
+                    <form id="order-form" action="enviar-encomenda.php" method="POST">
                         <!-- Informações Pessoais -->
                         <div class="form-section">
                             <h2>Informações Pessoais</h2>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="nome">Nome Completo</label>
-                                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                                    <label for="nome">Nome Completo *</label>
+                                    <input type="text" id="nome" name="nome" placeholder="O Seu nome completo" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="telefone">Telefone</label>
-                                    <input type="tel" id="telefone" name="telefone" placeholder="Seu número de telefone" required>
+                                    <label for="telefone">Telefone *</label>
+                                    <input type="tel" id="telefone" name="telefone" placeholder="O Seu número de telefone" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="cidade">Cidade</label>
-                                    <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required>
+                                    <label for="cidade">Cidade *</label>
+                                    <input type="text" id="cidade" name="cidade" placeholder="A Sua cidade" required>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
 
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="sabor">Sabor do Bolo</label>
+                                    <label for="sabor">Sabor do Bolo *</label>
                                     <select id="sabor" name="sabor" required>
                                         <option value="" disabled selected>Selecione um sabor</option>
                                         <option value="chocolate">Chocolate</option>
@@ -139,7 +139,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="recheio">Recheio</label>
+                                    <label for="recheio">Recheio *</label>
                                     <select id="recheio" name="recheio" required>
                                         <option value="" disabled selected>Selecione um recheio</option>
                                         <option value="chocolate">Chocolate</option>
@@ -154,7 +154,7 @@
 
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="tamanho">Tamanho</label>
+                                    <label for="tamanho">Tamanho *</label>
                                     <select id="tamanho" name="tamanho" required>
                                         <option value="" disabled selected>Selecione um tamanho</option>
                                         <option value="pequeno">Pequeno (até 10 pessoas)</option>
@@ -164,7 +164,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="formato">Formato</label>
+                                    <label for="formato">Formato *</label>
                                     <select id="formato" name="formato" required>
                                         <option value="" disabled selected>Selecione um formato</option>
                                         <option value="redondo">Redondo</option>
@@ -194,19 +194,19 @@
                                 <label>Extras</label>
                                 <div class="checkbox-group">
                                     <div class="checkbox-option">
-                                        <input type="checkbox" id="topo" name="extras" value="topo">
+                                        <input type="checkbox" id="topo" name="extras[]" value="topo">
                                         <label for="topo">Topo personalizado</label>
                                     </div>
                                     <div class="checkbox-option">
-                                        <input type="checkbox" id="numeros" name="extras" value="numeros">
+                                        <input type="checkbox" id="numeros" name="extras[]" value="numeros">
                                         <label for="numeros">Números/Letras</label>
                                     </div>
                                     <div class="checkbox-option">
-                                        <input type="checkbox" id="flores" name="extras" value="flores">
+                                        <input type="checkbox" id="flores" name="extras[]" value="flores">
                                         <label for="flores">Flores de açúcar</label>
                                     </div>
                                     <div class="checkbox-option">
-                                        <input type="checkbox" id="figuras" name="extras" value="figuras">
+                                        <input type="checkbox" id="figuras" name="extras[]" value="figuras">
                                         <label for="figuras">Figuras modeladas</label>
                                     </div>
                                 </div>
@@ -218,7 +218,7 @@
                             <h2>Data e Entrega</h2>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="data-evento">Data do Evento</label>
+                                    <label for="data-evento">Data do Evento *</label>
                                     <input type="text" id="data-evento" name="data-evento" placeholder="Selecione uma data" required>
                                 </div>
                                 <div class="form-group">
@@ -229,8 +229,8 @@
                                             <label for="levantar">Levantar na loja</label>
                                         </div>
                                         <div class="radio-option">
-                                            <input type="radio" id="entrega" name="entrega" value="entrega">
-                                            <label for="entrega">Entrega (sujeito a taxa)</label>
+                                            <input type="radio" id="entrega-domicilio" name="entrega" value="entrega">
+                                            <label for="entrega-domicilio">Entrega (sujeito a taxa)</label>
                                         </div>
                                     </div>
                                 </div>
